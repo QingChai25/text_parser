@@ -1,9 +1,4 @@
-# from sys improt argv
-# BooleanTest.py BooleanTest.txt = argv
-# txt = open(BooleanTest.txt)
 
-# for x in txt:
-# 	ReadEachLine = readline(txt)
 	
 
 def convertFileToList(filePath):
