@@ -1,3 +1,3 @@
-fjdksajfdksa	answer1
-jivfjij	answer2
-bmfdsjbifdsibi	answer3
+True and True	answer1
+100 == 10	answer2
+False or False	answer3
