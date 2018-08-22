@@ -17,10 +17,36 @@ def fileReadAndConvert(filePath):
 	lineList = convertFileToList(filePath)
 	return seperateInputAnswer(lineList)
 
+def booleanize(boolString):
+	if boolString == "True":
+		result = True
+	elif boolString == "False":
+		result = False
+	else:
+		raise ValueError("spell error!")
+
+	return result 
+
+def getType1Expression(expressionList):
+	left = booleanize(expressionList[0])
+	right = booleanize(expressionList[2])
+	operand = expressionList[1]
+	if operand == "and":
+		return left and right
+	elif operand == "or":
+		return left or right
+	else:
+		raise ValueError("logic operand not recognized!!")
+
+
 
 def test():
-	filePath = "test.txt"
-	print(fileReadAndConvert(filePath))
-
+	l1 = ["True", "and", "False"]
+	l2 = ["False", "or", "True"]
+	l3 = ["True", "==", "True"]
+	if not getType1Expression(l1):
+		print("l1 works.")
+	
 test()
+
 
